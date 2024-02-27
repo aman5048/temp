@@ -7,12 +7,13 @@ import {
 } from 'react-router-dom';
 import Login from './components/loginPage';
 import Signup from './components/signup';
-import ResponsiveCarousel from './components/corusal';
+import ResponsiveCarousel from './components/pages/corusal';
+import Home from './components/pages/home';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Signup />,
+    element: <Home></Home>,
   },
   {
     path: '/login',
