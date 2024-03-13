@@ -5,8 +5,8 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
-import Login from './components/loginPage';
-import Signup from './components/signup';
+import Login from './components/pages/loginPage';
+import Signup from './components/pages/signup';
 import ResponsiveCarousel from './components/pages/corusal';
 import Home from './components/pages/home';
 
