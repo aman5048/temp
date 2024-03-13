@@ -11,13 +11,13 @@ function Editor() {
   ];
   const [printSize, setPrintSize] = React.useState(100);
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
+    <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
       <div 
         className=" rounded-lg bg-slate-300 px-10  "
         id="left "
       >
         <div
-          className="rounded-lg relative px-10 bg-red-500"
+          className="rounded-lg relative px-10 bg-red-500 "
         >
         <img src={Tshirt[0]} alt="Image 1" className="w-full h-full" />
         <div className="absolute mix-blend-multiply top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -34,7 +34,12 @@ function Editor() {
             +
           </button>
           <button 
-            onClick={() => setPrintSize(printSize > 10 ? printSize - 10 : 10)}
+            onClick={() => 
+              {
+                setPrintSize(printSize > 10 ? printSize - 10 : 10)
+                console.log(printSize)
+              }
+            }
             className="absolute bottom-0 left-0 m-4 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-700"
           >
             -
