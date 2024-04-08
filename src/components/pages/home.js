@@ -6,12 +6,12 @@ import Footer from "./footer";
 import Editor from "../editing/editor";
 
 export default function Home() {
-    return (
-        <div>
-            <Navbar />
-            {/* <ResponsiveCarousel /> */}
-            <Editor />
-            <Footer/>
-        </div>
-    );
+  return (
+    <div>
+      <Navbar />
+      {/* <ResponsiveCarousel /> */}
+      <Editor />
+      <Footer />
+    </div>
+  );
 }
