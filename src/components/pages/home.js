@@ -4,13 +4,15 @@ import ResponsiveCarousel from "./corusal";
 import Navbar from "./Navbar";
 import Footer from "./footer";
 import Editor from "../editing/editor";
+import Landing from "./landing";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
-      {/* <ResponsiveCarousel /> */}
-      <Editor />
+      <ResponsiveCarousel />
+      <Landing />
+      {/* <Editor /> */}
       <Footer />
     </div>
   );

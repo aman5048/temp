@@ -29,7 +29,7 @@ function Uploadimag(props) {
               </div>
             </div>
 
-            <div>
+            <div className="grid grid-rows-2 items-center justify-center gap-2 w-full">
               <button
                 onClick={($event) => props.print(selectedImage, $event)}
                 className="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
@@ -37,9 +37,9 @@ function Uploadimag(props) {
                 Upload Image
               </button>
 
-              <span>
+              <span className="hover:shadow-form w-full rounded-md h-full bg-[#6A64F1]  cursor-pointer text-center text-base font-semibold text-white ">
                 <input
-                  className="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 cursor-pointer px-8 text-center text-base font-semibold text-white outline-none "
+                  className=""
                   type="file"
                   accept="image/*"
                   onChange={handleInputChange}

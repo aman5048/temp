@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import EditingForm from "./editingForm";
 import Uploadimag from "./uploadimag";
 import Tshirt from "./pngegg.png";
+import "./style.css";
 // import "./images.png";
 function Editor() {
   // const Tshirt = [
@@ -14,30 +15,34 @@ function Editor() {
     console.log(file);
     setPrint(file);
   }
-  const [printSize, setPrintSize] = React.useState(10);
+  const [printSize, setPrintSize] = React.useState(100);
+
   return (
     <div className="grid md:grid-flow-row lg:grid-cols-3 xl:grid-cols-3">
       <div
         className=" rounded-lg bg-slate-300 px-10 h-full col-span-2 "
         id="left "
       >
-        <div className="rounded-lg relative   bg-white h-full">
+        <div className="rounded-lg relative   bg-white h-full items-center">
           <img
             src={Tshirt}
             alt="Image 1"
             className=" aspect-square w-full h-full"
           />
-          <div className="absolute top-1/4 left-1/4 bottom-1/4 right-1/4 w-1/2  h-1/2 ">
+          <div
+            className={`absolute border-white overflow-clip border-dashed border-2 top-1/4   bottom-1/4  w-2/5  h-1/2 mera-center`}
+          >
             {print && (
               <img
-                className={`w-${printSize} h-${printSize}  rounded-lg`}
+                style={{ width: `${printSize}%`, height: `${printSize}%` }}
+                className={`object-contain   rounded-lg mx-auto my-auto`}
                 src={URL.createObjectURL(print)}
                 alt="Image 2"
               />
             )}
           </div>
           <button
-            onClick={() => setPrintSize(printSize < 100 ? printSize + 10 : 100)}
+            onClick={() => setPrintSize(printSize < 200 ? printSize + 10 : 100)}
             className="absolute bottom-0 right-0 m-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700"
           >
             +
