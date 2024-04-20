@@ -1,4 +1,23 @@
+
+@media screen and (max-width: 600px) {
+    .mycrousal{
+        width: 100%;
+        height: 40vh;
+    }
+}
 .mycrousal{
-    width: 100vb;
-    height: 70vh;
+    width: 100%;
+    height: 30vh;
+}
+@media screen and (max-width: 1024px) {
+    .mycrousal{
+        width: 100%;
+        height: 60vh;
+    }
+}
+@media screen and (min-width: 1025px) {
+    .mycrousal{
+        width: 100%;
+        height: 80vh;
+    }
 }
