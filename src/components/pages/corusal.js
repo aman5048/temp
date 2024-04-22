@@ -3,7 +3,6 @@ import { Divide } from "react-feather";
 import "./stylecrousal.componet.css";
 function ResponsiveCarousel() {
   const slides = [
-    "https://www.creativefabrica.com/wp-content/uploads/2022/06/22/Fashion-Sale-Social-Media-Carousel-Graphics-32166085.png",
     "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/32acbf101924369.5f2a92935a4ad.jpg",
   ];
   const [idx, setidx] = useState(0);

@@ -6,6 +6,7 @@ import Footer from "./common/footer";
 import Editor from "../editing/editor";
 import Landing from "./landing";
 import Login from "./SignUpPage";
+import ProductList from "../products/productList";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <ResponsiveCarousel />
       <Landing />
+      <ProductList />
       {/* <Editor /> */}
       <Footer />
     </div>
