@@ -5,11 +5,13 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import Login from "./components/pages/loginPage";
-import Signup from "./components/pages/signup";
+
 import ResponsiveCarousel from "./components/pages/corusal";
 import Home from "./components/pages/home";
-import Footer from "./components/pages/footer";
+import Footer from "./components/pages/common/footer";
+import LogIn from "./components/pages/LogInPage";
+import Signup from "./components/pages/SignUpPage";
+import Editor from "./components/editing/editor";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,7 +19,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Login />,
+    element: <LogIn />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
+    path: "/editor",
+    element: <Editor />,
   },
 ]);
 
