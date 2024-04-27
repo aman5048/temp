@@ -1,14 +1,14 @@
+import Cart from "../cart/cart";
 import NavbarMain from "./navbars/NavbarMain";
 import Footer from "./common/footer";
-import Editor from "../editing/editor";
-function EditingPage() {
+function CartPage() {
   return (
-    <div>
+    <>
       <NavbarMain />
-      <Editor />
+      <Cart />
       <Footer />
-    </div>
+    </>
   );
 }
 
-export default EditingPage;
+export default CartPage;

@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import { useSelector, useDispatch } from "react-redux";
+// import { selectCount, increment, incrementAsync } from "./auth/authSlice";
 
 function Signup() {
+  // const count = useSelector(selectCount);
+  // const dispatch = useDispatch();
+
   return (
     <div>
       <section className="bg-white">
@@ -192,9 +197,11 @@ function Signup() {
                 </div>
 
                 <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                  <button className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
-                    Create an account
-                  </button>
+                  <Link to="/mainpage">
+                    <button className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
+                      Create an account
+                    </button>
+                  </Link>
 
                   <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                     Already have an account?

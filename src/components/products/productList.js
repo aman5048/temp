@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import {
@@ -8,50 +8,104 @@ import {
   PlusIcon,
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  fetchAllProductsAsync,
+  fetchProductsByFiltersAsync,
+  selectAllProducts,
+} from "./productListSlice";
 
-import React from "react";
 const products = [
   {
     id: 1,
-    name: "Earthen Bottle",
-    href: "#",
-    price: "$48",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg",
-    imageAlt:
-      "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+    title: "iPhone 9",
+    description: "An apple mobile which is nothing like apple",
+    price: 549,
+    discountPercentage: 12.96,
+    rating: 4.69,
+    stock: 94,
+    brand: "Apple",
+    category: "smartphones",
+    thumbnail: "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+    images: [
+      "https://i.dummyjson.com/data/products/1/1.jpg",
+      "https://i.dummyjson.com/data/products/1/2.jpg",
+      "https://i.dummyjson.com/data/products/1/3.jpg",
+      "https://i.dummyjson.com/data/products/1/4.jpg",
+      "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+    ],
   },
   {
     id: 2,
-    name: "Nomad Tumbler",
-    href: "#",
-    price: "$35",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg",
-    imageAlt:
-      "Olive drab green insulated bottle with flared screw lid and flat top.",
+    title: "iPhone X",
+    description:
+      "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+    price: 899,
+    discountPercentage: 17.94,
+    rating: 4.44,
+    stock: 34,
+    brand: "Apple",
+    category: "smartphones",
+    thumbnail: "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+    images: [
+      "https://i.dummyjson.com/data/products/2/1.jpg",
+      "https://i.dummyjson.com/data/products/2/2.jpg",
+      "https://i.dummyjson.com/data/products/2/3.jpg",
+      "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+    ],
   },
   {
     id: 3,
-    name: "Focus Paper Refill",
-    href: "#",
-    price: "$89",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg",
-    imageAlt:
-      "Person using a pen to cross a task off a productivity paper card.",
+    title: "Samsung Universe 9",
+    description:
+      "Samsung's new variant which goes beyond Galaxy to the Universe",
+    price: 1249,
+    discountPercentage: 15.46,
+    rating: 4.09,
+    stock: 36,
+    brand: "Samsung",
+    category: "smartphones",
+    thumbnail: "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+    images: ["https://i.dummyjson.com/data/products/3/1.jpg"],
   },
   {
     id: 4,
-    name: "Machined Mechanical Pencil",
-    href: "#",
-    price: "$35",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg",
-    imageAlt:
-      "Hand holding black machined steel mechanical pencil with brass tip and top.",
+    title: "OPPOF19",
+    description: "OPPO F19 is officially announced on April 2021.",
+    price: 280,
+    discountPercentage: 17.91,
+    rating: 4.3,
+    stock: 123,
+    brand: "OPPO",
+    category: "smartphones",
+    thumbnail: "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
+    images: [
+      "https://i.dummyjson.com/data/products/4/1.jpg",
+      "https://i.dummyjson.com/data/products/4/2.jpg",
+      "https://i.dummyjson.com/data/products/4/3.jpg",
+      "https://i.dummyjson.com/data/products/4/4.jpg",
+      "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
+    ],
   },
-  // More products...
+  {
+    id: 5,
+    title: "Huawei P30",
+    description:
+      "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+    price: 499,
+    discountPercentage: 10.58,
+    rating: 4.09,
+    stock: 32,
+    brand: "Huawei",
+    category: "smartphones",
+    thumbnail: "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+    images: [
+      "https://i.dummyjson.com/data/products/5/1.jpg",
+      "https://i.dummyjson.com/data/products/5/2.jpg",
+      "https://i.dummyjson.com/data/products/5/3.jpg",
+    ],
+  },
 ];
 
 const sortOptions = [
@@ -111,6 +165,28 @@ function classNames(...classes) {
 }
 
 export default function ProductList() {
+  const dispatch = useDispatch();
+  const productz = useSelector(selectAllProducts);
+
+  console.log("products in ProductList", productz);
+  const [filter, setFilter] = useState({});
+  const handleFilter = (e, section, option) => {
+    const newFilter = { ...filter, [section.id]: option.value };
+    setFilter(newFilter);
+    dispatch(fetchProductsByFiltersAsync(newFilter));
+    // localStorage.setItem("filter", JSON.stringify(newFilter));
+    console.log(section.id, option.value);
+  };
+
+  const handleSort = (e, option) => {
+    const newFilter = { ...filter, _sort: option.sort, _order: option.order };
+    setFilter(newFilter);
+    dispatch(fetchProductsByFiltersAsync(newFilter));
+  };
+
+  useEffect(() => {
+    dispatch(fetchAllProductsAsync());
+  }, [dispatch]);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   return (
@@ -391,41 +467,40 @@ export default function ProductList() {
 
               {/* Product grid */}
               <div className="lg:col-span-3">
+                <div className="bg-white">
+                  <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+                    <h2 className="sr-only">Products</h2>
+
+                    <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+                      {productz &&
+                        productz.map((product) => (
+                          <Link key={product.id} to="/productdetails">
+                            <a className="group">
+                              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                                <img
+                                  // src={product.thumbnail}
+                                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                                  alt={product.title}
+                                  className="h-full w-full object-cover object-center group-hover:opacity-75"
+                                />
+                              </div>
+                              <h3 className="mt-4 text-sm text-gray-700">
+                                {product.title}
+                              </h3>
+                              <p className="mt-1 text-lg font-medium text-gray-900">
+                                {product.price}
+                              </p>
+                            </a>
+                          </Link>
+                        ))}
+                    </div>
+                  </div>
+                </div>
                 {/* Your content */}
-                <Products />
               </div>
             </div>
           </section>
         </main>
-      </div>
-    </div>
-  );
-}
-
-function Products() {
-  console.log(products);
-  return (
-    <div className="bg-white">
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 className="sr-only">Products</h2>
-
-        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-          {products.map((product) => (
-            <a key={product.id} href={product.href} className="group">
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                <img
-                  src={product.imageSrc}
-                  alt={product.imageAlt}
-                  className="h-full w-full object-cover object-center group-hover:opacity-75"
-                />
-              </div>
-              <h3 className="mt-4 text-sm text-gray-700">{product.name}</h3>
-              <p className="mt-1 text-lg font-medium text-gray-900">
-                {product.price}
-              </p>
-            </a>
-          ))}
-        </div>
       </div>
     </div>
   );

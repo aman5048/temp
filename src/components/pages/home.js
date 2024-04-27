@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ResponsiveCarousel from "./corusal";
-import Navbar from "./Navbar";
+import Navbar from "./navbars/Navbar";
 import Footer from "./common/footer";
 import Editor from "../editing/editor";
 import Landing from "./landing";
@@ -14,7 +14,6 @@ export default function Home() {
       <Navbar />
       <ResponsiveCarousel />
       <Landing />
-      <ProductList />
       {/* <Editor /> */}
       <Footer />
     </div>
