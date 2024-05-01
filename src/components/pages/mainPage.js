@@ -5,8 +5,9 @@ import Footer from "./common/footer";
 function MainPage() {
   return (
     <>
-      <NavbarMain />
-      <ProductList />
+      <NavbarMain>
+        <ProductList />
+      </NavbarMain>
       <Footer />
     </>
   );

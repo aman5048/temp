@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import { useSelector, useDispatch } from "react-redux";
-// import { selectCount, increment, incrementAsync } from "./auth/authSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { selectCount, increment, incrementAsync } from "./auth/authSlice";
 
 export default function LogIn() {
-  // const count = useSelector(selectCount);
-  // const dispatch = useDispatch();
+  const count = useSelector(selectCount);
+  const dispatch = useDispatch();
   return (
     <div>
       <section className="bg-white">

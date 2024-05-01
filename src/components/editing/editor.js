@@ -19,10 +19,7 @@ function Editor() {
 
   return (
     <div className="grid md:grid-flow-row lg:grid-cols-3 xl:grid-cols-3">
-      <div
-        className=" rounded-lg bg-slate-300 px-10 h-full col-span-2 "
-        id="left "
-      >
+      <div className=" rounded-lg  px-10 h-full col-span-2 " id="left ">
         <div className="rounded-lg relative   bg-white h-full items-center">
           <img
             src={Tshirt}
