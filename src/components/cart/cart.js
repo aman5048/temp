@@ -1,37 +1,13 @@
 import React, { useState, Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { increment, incrementAsync, selectItems } from "./cartSlice";
+import {
+  updateCartAsync,
+  deleteItemFromCartAsync,
+  selectItems,
+} from "./cartSlice";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-
-// const products = [
-//   {
-//     id: 1,
-//     name: "Throwback Hip Bag",
-//     href: "#",
-//     color: "Salmon",
-//     price: "$90.00",
-//     quantity: 1,
-//     imageSrc:
-//       "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
-//     imageAlt:
-//       "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.",
-//   },
-//   {
-//     id: 2,
-//     name: "Medium Stuff Satchel",
-//     href: "#",
-//     color: "Blue",
-//     price: "$32.00",
-//     quantity: 1,
-//     imageSrc:
-//       "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg",
-//     imageAlt:
-//       "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
-//   },
-//   // More products...
-// ];
 
 export default function Cart() {
   const [open, setOpen] = useState(true);
@@ -42,6 +18,14 @@ export default function Cart() {
     0
   );
   const totalItems = items.reduce((total, item) => item.quantity + total, 0);
+
+  const handleQuantity = (e, item) => {
+    dispatch(updateCartAsync({ ...item, quantity: +e.target.value }));
+  };
+
+  const handleRemove = (e, id) => {
+    dispatch(deleteItemFromCartAsync(id));
+  };
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -127,11 +111,26 @@ export default function Cart() {
                                   </div>
                                   <div className="flex flex-1 items-end justify-between text-sm">
                                     <p className="text-gray-500">
-                                      Qty {product.quantity}
+                                      Qty
+                                      <select
+                                        onChange={(e) =>
+                                          handleQuantity(e, product)
+                                        }
+                                        value={product.quantity}
+                                      >
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                      </select>
                                     </p>
 
                                     <div className="flex">
                                       <button
+                                        onClick={(e) =>
+                                          handleRemove(e, product.id)
+                                        }
                                         type="button"
                                         className="font-medium text-indigo-600 hover:text-indigo-500"
                                       >
