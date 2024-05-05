@@ -19,6 +19,7 @@ import TermAndConditionPage from "./components/pages/termAndConditionPage";
 import AboutUsPage from "./components/pages/aboutPage";
 import Protected from "./components/pages/auth/protected";
 import { selectLoggedInUser } from "./components/pages/auth/authSlice";
+import { fetchItemsByUserIdAsync } from "./components/cart/cartSlice";
 
 const router = createBrowserRouter([
   {
@@ -91,11 +92,11 @@ function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
 
-  // useEffect(() => {
-  //   if (user) {
-  //     dispatch(fetchItemsByUserIdAsync(user.id));
-  //   }
-  // }, [dispatch, user]);
+  useEffect(() => {
+    if (user) {
+      dispatch(fetchItemsByUserIdAsync(user.id));
+    }
+  }, [dispatch, user]);
 
   return (
     <div>

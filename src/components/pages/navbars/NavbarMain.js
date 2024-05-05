@@ -7,6 +7,8 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectItems } from "../../cart/cartSlice";
 
 const navigation = [
   { name: "Dashboard", navigatorLink: "/mainpage", current: true },
@@ -18,7 +20,7 @@ const navigation = [
 const userProfile = [
   { name: "Yourprofile", navigatorLink: "/mainpage", current: true },
   { name: "Settings", navigatorLink: "/mainpage", current: false },
-  { name: "Signout", navigatorLink: "/mainpage", current: false },
+  { name: "Signout", navigatorLink: "/", current: false },
 ];
 
 const user = {
@@ -33,6 +35,7 @@ function classNames(...classes) {
 }
 
 export default function NavbarMain({ children }) {
+  const items = useSelector(selectItems);
   return (
     // <Disclosure as="nav" className="bg-gray-800">
     //   {({ open }) => (
@@ -251,6 +254,11 @@ export default function NavbarMain({ children }) {
                                 aria-hidden="true"
                               />
                             </button>
+                            {items.length > 0 && (
+                              <span className="inline-flex items-center rounded-md mb-7 -ml-3 bg-red-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-red-600/10">
+                                {items.length}
+                              </span>
+                            )}
                           </Link>
 
                           {/* Profile dropdown */}
@@ -306,11 +314,17 @@ export default function NavbarMain({ children }) {
                             className="ml-auto bg-gray-800 flex-shrink-0 p-1 text-gray-400 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                           >
                             <span className="sr-only">View notifications</span>
+
                             <ShoppingCartIcon
                               className="h-6 w-6"
                               aria-hidden="true"
                             />
                           </button>
+                          {items.length > 0 && (
+                            <span className="inline-flex items-center rounded-md bg-red-50 mb-7 -ml-3 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+                              {items.length}
+                            </span>
+                          )}
                         </Link>
 
                         <Menu as="div" className="ml-3 relative">

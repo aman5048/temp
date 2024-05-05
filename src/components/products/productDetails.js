@@ -7,6 +7,8 @@ import {
   selectProductById,
 } from "./productListSlice";
 import { useParams } from "react-router-dom";
+import { addToCartAsync } from "../cart/cartSlice";
+import { selectLoggedInUser } from "../pages/auth/authSlice";
 
 const colors = [
   { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
@@ -34,40 +36,20 @@ const highlights = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
-const product = {
-  name: "Basic Tee 6-Pack",
-  price: "$192",
-  rating: 3.9,
-  reviewCount: 117,
-  href: "#",
-  breadcrumbs: [
-    { id: 1, name: "Men", href: "#" },
-    { id: 2, name: "Clothing", href: "#" },
-    { id: 3, name: "T-Shirts", href: "#" },
-  ],
-  images: [
-    {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg",
-      alt: "Front of men's Basic Tee in black.",
-    },
-    {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot-01.jpg",
-      alt: "Side of men's Basic Tee in black.",
-    },
-    {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot-02.jpg",
-      alt: "Back of men's Basic Tee in black.",
-    },
-  ],
-};
 
 export default function ProductDetail() {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
+  const user = useSelector(selectLoggedInUser);
   const product = useSelector(selectProductById);
   console.log({ product });
   const dispatch = useDispatch();
   const params = useParams();
+
+  const handleCart = (e) => {
+    e.preventDefault();
+    dispatch(addToCartAsync({ ...product, quantity: 1, user: user.id }));
+  };
 
   useEffect(() => {
     dispatch(fetchAllProductByIdAsync(params.id));
@@ -306,6 +288,7 @@ export default function ProductDetail() {
                   </RadioGroup>
                 </div>
                 <button
+                  onClick={handleCart}
                   type="submit"
                   className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
