@@ -1,14 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { selectCount, increment, incrementAsync } from "./auth/authSlice";
+import {
+  selectCount,
+  selectError,
+  selectLoggedInUser,
+  createUserAsync,
+} from "./auth/authSlice";
+import { useForm } from "react-hook-form";
 
 function Signup() {
-  const count = useSelector(selectCount);
   const dispatch = useDispatch();
+  const user = useSelector(selectLoggedInUser);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  console.log(errors);
 
   return (
     <div>
+      {user && <Navigate to="/mainpage" replace={true}></Navigate>}
       <section className="bg-white">
         <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
           <section className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
@@ -78,7 +93,19 @@ function Signup() {
                 </p>
               </div>
 
-              <form action="#" className="mt-8 grid grid-cols-6 gap-6">
+              <form
+                noValidate
+                onSubmit={handleSubmit((data) => {
+                  dispatch(
+                    createUserAsync({
+                      email: data.email,
+                      password: data.password,
+                    })
+                  );
+                  console.log(data);
+                })}
+                className="mt-8 grid grid-cols-6 gap-6"
+              >
                 <div className="col-span-6 sm:col-span-3">
                   <label
                     htmlFor="FirstName"
@@ -123,9 +150,18 @@ function Signup() {
                   <input
                     type="email"
                     id="Email"
-                    name="email"
+                    {...register("email", {
+                      required: "email is required",
+                      pattern: {
+                        value: /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi,
+                        message: "email not valid",
+                      },
+                    })}
                     className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                   />
+                  {errors.email && (
+                    <p className="text-red-500">{errors.email.message}</p>
+                  )}
                 </div>
 
                 <div className="col-span-6 sm:col-span-3">
@@ -140,14 +176,26 @@ function Signup() {
                   <input
                     type="password"
                     id="Password"
-                    name="password"
+                    {...register("password", {
+                      required: "password is required",
+                      pattern: {
+                        value:
+                          /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm,
+                        message: `- at least 8 characters\n
+                        - must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number\n
+                        - Can contain special characters`,
+                      },
+                    })}
                     className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                   />
+                  {errors.password && (
+                    <p className="text-red-500">{errors.password.message}</p>
+                  )}
                 </div>
 
                 <div className="col-span-6 sm:col-span-3">
                   <label
-                    htmlFor="PasswordConfirmation"
+                    htmlFor="confirmPassword"
                     className="block text-sm font-medium text-gray-700"
                   >
                     Password Confirmation
@@ -155,10 +203,20 @@ function Signup() {
 
                   <input
                     type="password"
-                    id="PasswordConfirmation"
-                    name="password_confirmation"
+                    id="confirmPassword"
+                    {...register("confirmPassword", {
+                      required: "confirm password is required",
+                      validate: (value, formValues) =>
+                        value === formValues.password ||
+                        "password not matching",
+                    })}
                     className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                   />
+                  {errors.confirmPassword && (
+                    <p className="text-red-500">
+                      {errors.confirmPassword.message}
+                    </p>
+                  )}
                 </div>
 
                 <div className="col-span-6">
@@ -194,11 +252,11 @@ function Signup() {
 
                 <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
                   {/* submit */}
-                  <Link to="/mainpage">
-                    <button className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
-                      Create an account
-                    </button>
-                  </Link>
+                  {/* <Link to="/mainpage"> */}
+                  <button className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
+                    Create an account
+                  </button>
+                  {/* </Link> */}
 
                   <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                     Already have an account?

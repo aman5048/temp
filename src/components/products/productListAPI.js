@@ -49,3 +49,27 @@ export function fetchProductsByFilters(filter, sort, pagination) {
     resolve({ data: { products: data, totalItems: +totalItems } });
   });
 }
+
+export function fetchBrands() {
+  return new Promise(async (resolve) => {
+    const response = await fetch("http://localhost:8080/brands");
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+
+export function fetchCatogories() {
+  return new Promise(async (resolve) => {
+    const response = await fetch("http://localhost:8080/categories");
+    const data = await response.json();
+    resolve({ data });
+  });
+}
+
+export function fetchColors() {
+  return new Promise(async (resolve) => {
+    const response = await fetch("http://localhost:8080/colors");
+    const data = await response.json();
+    resolve({ data });
+  });
+}

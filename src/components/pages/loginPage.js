@@ -1,13 +1,29 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { selectCount, increment, incrementAsync } from "./auth/authSlice";
+import {
+  selectError,
+  selectLoggedInUser,
+  checkUserAsync,
+} from "./auth/authSlice";
+import { useForm } from "react-hook-form";
 
 export default function LogIn() {
-  const count = useSelector(selectCount);
+  // const count = useSelector(selectCount);
   const dispatch = useDispatch();
+  const error = useSelector(selectError);
+  const user = useSelector(selectLoggedInUser);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  console.log(error);
+
   return (
     <div>
+      {user && <Navigate to="/mainpage" replace={true} />}
       <section className="bg-white">
         <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
           <aside className="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
@@ -44,7 +60,20 @@ export default function LogIn() {
                 looking to shop for stylish attire? Join Fashion Forge today!
               </p>
 
-              <form action="#" className="mt-8 grid grid-cols-6 gap-6">
+              <form
+                noValidate
+                onSubmit={handleSubmit((data) => {
+                  dispatch(
+                    checkUserAsync({
+                      email: data.email,
+                      password: data.password,
+                    })
+                  );
+                })}
+                action="#"
+                method="POST"
+                className="mt-8 grid grid-cols-6 gap-6"
+              >
                 <div className="col-span-6">
                   <label
                     htmlFor="Email"
@@ -56,9 +85,18 @@ export default function LogIn() {
                   <input
                     type="email"
                     id="Email"
-                    name="email"
+                    {...register("email", {
+                      required: "email is required",
+                      pattern: {
+                        value: /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi,
+                        message: "email not valid",
+                      },
+                    })}
                     className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                   />
+                  {errors.email && (
+                    <p className="text-red-500">{errors.email.message}</p>
+                  )}
                 </div>
 
                 <div className="col-span-6 sm:col-span-3">
@@ -72,25 +110,14 @@ export default function LogIn() {
                   <input
                     type="password"
                     id="Password"
-                    name="password"
+                    {...register("password", {
+                      required: "password is required",
+                    })}
                     className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                   />
-                </div>
-
-                <div className="col-span-6 sm:col-span-3">
-                  <label
-                    htmlFor="PasswordConfirmation"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Password Confirmation
-                  </label>
-
-                  <input
-                    type="password"
-                    id="PasswordConfirmation"
-                    name="password_confirmation"
-                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                  />
+                  {errors.password && (
+                    <p className="text-red-500">{errors.password.message}</p>
+                  )}
                 </div>
 
                 <div className="col-span-6">
@@ -112,24 +139,27 @@ export default function LogIn() {
                 <div className="col-span-6">
                   <p className="text-sm text-gray-500">
                     By creating an account, you agree to our
-                    <a href="#" className="text-gray-700 underline">
+                    <Link
+                      to={"/termsAndConditions"}
+                      className="text-gray-700 underline"
+                    >
                       {" "}
                       terms and conditions{" "}
-                    </a>
+                    </Link>
                     and
-                    <a href="#" className="text-gray-700 underline">
+                    <Link to={"/"} className="text-gray-700 underline">
                       privacy policy
-                    </a>
+                    </Link>
                     .
                   </p>
                 </div>
 
                 <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                  <Link to={"/mainpage"}>
-                    <button className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
-                      Log in
-                    </button>
-                  </Link>
+                  {/* <Link to={"/mainpage"}> */}
+                  <button className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
+                    Log in
+                  </button>
+                  {/* </Link> */}
 
                   <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                     Do not have an account?
