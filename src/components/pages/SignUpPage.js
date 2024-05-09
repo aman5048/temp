@@ -100,6 +100,9 @@ function Signup() {
                     createUserAsync({
                       email: data.email,
                       password: data.password,
+                      first_name: data.firstname,
+                      last_name: data.lastname,
+                      addresses: [],
                     })
                   );
                   console.log(data);
@@ -117,7 +120,13 @@ function Signup() {
                   <input
                     type="text"
                     id="FirstName"
-                    name="first_name"
+                    {...register("firstname", {
+                      required: "First Name is required",
+                      pattern: {
+                        value: /^[A-Za-z]+$/i,
+                        message: "First name should only contain alphabets",
+                      },
+                    })}
                     className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                   />
                 </div>
@@ -133,9 +142,18 @@ function Signup() {
                   <input
                     type="text"
                     id="LastName"
-                    name="last_name"
+                    {...register("lastname", {
+                      required: "lastname is required",
+                      pattern: {
+                        value: /^[A-Za-z]+$/i,
+                        message: "Last name should only contain alphabets",
+                      },
+                    })}
                     className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                   />
+                  {errors.lastname && (
+                    <p className="text-red-500">{errors.lastname.message}</p>
+                  )}
                 </div>
 
                 <div className="col-span-6">

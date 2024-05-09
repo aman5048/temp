@@ -2516,10 +2516,139 @@
   ],
   "users": [
     {
-      "id": "1",
+      "id": "ddb9",
       "email": "Tester123@gmail.com",
-      "password": "Tester123"
+      "password": "TesterOne123",
+      "first_name": "Aman",
+      "last_name": "Singh",
+      "addresses": [
+        {
+          "name": "Aman Singh",
+          "email": "singhaman5048@gmail.com",
+          "phone": "09588198123",
+          "street": "jksdnakd jkdsj",
+          "city": "sikkar",
+          "state": "Rajisthsn",
+          "pinCode": "126512"
+        }
+      ]
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "a27b",
+      "title": "Samsung Universe 9",
+      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+      "price": 1249,
+      "discountPercentage": 15.46,
+      "rating": 4.09,
+      "stock": 36,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/3/1.jpg"
+      ],
+      "quantity": 1,
+      "user": "ddb9"
+    }
+  ],
+  "orders": [
+    {
+      "id": "b4ba",
+      "items": [
+        {
+          "id": "a27b",
+          "title": "Samsung Universe 9",
+          "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+          "price": 1249,
+          "discountPercentage": 15.46,
+          "rating": 4.09,
+          "stock": 36,
+          "brand": "Samsung",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/3/1.jpg"
+          ],
+          "quantity": 1,
+          "user": "ddb9"
+        }
+      ],
+      "totalAmount": 1249,
+      "totalItems": 1,
+      "user": {
+        "id": "ddb9",
+        "email": "Tester123@gmail.com",
+        "password": "TesterOne123",
+        "first_name": "Aman",
+        "last_name": "Singh",
+        "addresses": [
+          {
+            "name": "Aman Singh",
+            "email": "singhaman5048@gmail.com",
+            "phone": "09588198123",
+            "street": "jksdnakd jkdsj",
+            "city": "sikkar",
+            "state": "Rajisthsn",
+            "pinCode": "126512"
+          }
+        ]
+      },
+      "paymentMethod": null,
+      "selectedAddress": null
+    },
+    {
+      "id": "bbe3",
+      "items": [
+        {
+          "id": "a27b",
+          "title": "Samsung Universe 9",
+          "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+          "price": 1249,
+          "discountPercentage": 15.46,
+          "rating": 4.09,
+          "stock": 36,
+          "brand": "Samsung",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/3/1.jpg"
+          ],
+          "quantity": 1,
+          "user": "ddb9"
+        }
+      ],
+      "totalAmount": 1249,
+      "totalItems": 1,
+      "user": {
+        "id": "ddb9",
+        "email": "Tester123@gmail.com",
+        "password": "TesterOne123",
+        "first_name": "Aman",
+        "last_name": "Singh",
+        "addresses": [
+          {
+            "name": "Aman Singh",
+            "email": "singhaman5048@gmail.com",
+            "phone": "09588198123",
+            "street": "jksdnakd jkdsj",
+            "city": "sikkar",
+            "state": "Rajisthsn",
+            "pinCode": "126512"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Aman Singh",
+        "email": "singhaman5048@gmail.com",
+        "phone": "09588198123",
+        "street": "jksdnakd jkdsj",
+        "city": "sikkar",
+        "state": "Rajisthsn",
+        "pinCode": "126512"
+      }
+    }
+  ]
 }

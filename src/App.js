@@ -86,6 +86,14 @@ const router = createBrowserRouter([
     path: "/termsAndCondition",
     element: <TermAndConditionPage />,
   },
+  {
+    path: "/checkout",
+    element: (
+      <Protected>
+        <Checkout />
+      </Protected>
+    ),
+  },
 ]);
 
 function App() {

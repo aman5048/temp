@@ -70,8 +70,8 @@ export default function LogIn() {
                     })
                   );
                 })}
-                action="#"
-                method="POST"
+                // action="#"
+                // method="POST"
                 className="mt-8 grid grid-cols-6 gap-6"
               >
                 <div className="col-span-6">
