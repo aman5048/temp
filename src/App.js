@@ -21,8 +21,10 @@ import Protected from "./components/pages/auth/protected";
 import { selectLoggedInUser } from "./components/pages/auth/authSlice";
 import { fetchItemsByUserIdAsync } from "./components/cart/cartSlice";
 import OrderSuccessPage from "./components/pages/OrderSuccessPage";
-import UserOrders from "./components/user/userOrders";
+// import UserOrders from "./components/user/userOrders";
 import UserOrdersPage from "./components/pages/userOrderPage";
+import { fetchLoggedInUserAsync } from "./components/user/userSlice";
+import UserProfilePage from "./components/pages/userProfilePage";
 
 const router = createBrowserRouter([
   {
@@ -108,6 +110,14 @@ const router = createBrowserRouter([
       // we will add Page later right now using component directly.
     ),
   },
+  {
+    path: "/profile",
+    element: (
+      <Protected>
+        <UserProfilePage />
+      </Protected>
+    ),
+  },
 ]);
 
 function App() {
@@ -117,6 +127,7 @@ function App() {
   useEffect(() => {
     if (user) {
       dispatch(fetchItemsByUserIdAsync(user.id));
+      dispatch(fetchLoggedInUserAsync(user.id));
     }
   }, [dispatch, user]);
 

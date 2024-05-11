@@ -2523,24 +2523,6 @@
       "last_name": "Singh",
       "addresses": [
         {
-          "name": "Aman Singh",
-          "email": "singhaman5048@gmail.com",
-          "phone": "09588198123",
-          "street": "jksdnakd jkdsj",
-          "city": "sikkar",
-          "state": "Rajisthsn",
-          "pinCode": "126512"
-        },
-        {
-          "name": "tester",
-          "email": "test@gmail.com",
-          "phone": "65156516516",
-          "street": "test",
-          "city": "bikanr",
-          "state": "Rajisthsn",
-          "pinCode": "126512"
-        },
-        {
           "name": "tester",
           "email": "test@gmail.com",
           "phone": "65156516516889",
