@@ -118,6 +118,13 @@ export default function LogIn() {
                   {errors.password && (
                     <p className="text-red-500">{errors.password.message}</p>
                   )}
+                  <Link
+                    to={"/forgot-Password"}
+                    className="pt-4 text-sm text-blue-500 sm:mt-0"
+                  >
+                    {" "}
+                    Forgot Password ??
+                  </Link>
                 </div>
 
                 <div className="col-span-6">

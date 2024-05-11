@@ -18,9 +18,9 @@ const navigation = [
 ];
 
 const userProfile = [
-  { name: "Yourprofile", navigatorLink: "/profile", current: true },
+  { name: "profile", navigatorLink: "/profile", current: true },
   { name: "My Orders", navigatorLink: "/orders", current: false },
-  { name: "Signout", navigatorLink: "/", current: false },
+  { name: "Sign out", navigatorLink: "/Logout", current: false },
 ];
 
 const user = {
