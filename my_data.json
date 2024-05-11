@@ -48,7 +48,9 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
-      "images": ["https://i.dummyjson.com/data/products/3/1.jpg"]
+      "images": [
+        "https://i.dummyjson.com/data/products/3/1.jpg"
+      ]
     },
     {
       "id": "4",
@@ -1426,7 +1428,9 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://i.dummyjson.com/data/products/78/thumbnail.jpg",
-      "images": ["https://i.dummyjson.com/data/products/78/thumbnail.jpg"]
+      "images": [
+        "https://i.dummyjson.com/data/products/78/thumbnail.jpg"
+      ]
     },
     {
       "id": "79",
@@ -1439,7 +1443,9 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://i.dummyjson.com/data/products/79/thumbnail.jpg",
-      "images": ["https://i.dummyjson.com/data/products/79/1.jpg"]
+      "images": [
+        "https://i.dummyjson.com/data/products/79/1.jpg"
+      ]
     },
     {
       "id": "80",
@@ -2533,8 +2539,25 @@
           "city": "bikanr",
           "state": "Rajisthsn",
           "pinCode": "126512"
+        },
+        {
+          "name": "tester one two",
+          "email": "Tester123@gmail.com",
+          "phone": "6588888813",
+          "street": "testing two",
+          "city": "citytwo",
+          "state": "statetwo",
+          "pinCode": "12222"
         }
       ]
+    },
+    {
+      "id": "d1d1",
+      "email": "TesterTwo123@gmail.com",
+      "password": "TesterTwo123",
+      "first_name": "tester",
+      "last_name": "two",
+      "addresses": []
     }
   ],
   "cart": [],
@@ -2628,6 +2651,77 @@
         "city": "bikanr",
         "state": "Rajisthsn",
         "pinCode": "126512"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "178e",
+      "items": [
+        {
+          "id": "a5a4",
+          "title": "Samsung Universe 9",
+          "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+          "price": 1249,
+          "discountPercentage": 15.46,
+          "rating": 4.09,
+          "stock": 36,
+          "brand": "Samsung",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/3/1.jpg"
+          ],
+          "quantity": 1,
+          "user": "ddb9"
+        }
+      ],
+      "totalAmount": 1249,
+      "totalItems": 1,
+      "user": {
+        "id": "ddb9",
+        "email": "Tester123@gmail.com",
+        "password": "TesterOne",
+        "first_name": "Aman",
+        "last_name": "Singh",
+        "addresses": [
+          {
+            "name": "Tester One",
+            "email": "Tester123@gmail.com",
+            "phone": "9588198123",
+            "street": "jiojiojoijoi",
+            "city": "sikkar",
+            "state": "Rajisthsn",
+            "pinCode": "126512"
+          },
+          {
+            "name": "tester two",
+            "email": "test@gmail.com",
+            "phone": "6515651651",
+            "street": "test",
+            "city": "bikanr",
+            "state": "Rajisthsn",
+            "pinCode": "126512"
+          },
+          {
+            "name": "tester one two",
+            "email": "Tester123@gmail.com",
+            "phone": "6588888813",
+            "street": "testing two",
+            "city": "citytwo",
+            "state": "statetwo",
+            "pinCode": "12222"
+          }
+        ]
+      },
+      "paymentMethod": "card",
+      "selectedAddress": {
+        "name": "tester one two",
+        "email": "Tester123@gmail.com",
+        "phone": "6588888813",
+        "street": "testing two",
+        "city": "citytwo",
+        "state": "statetwo",
+        "pinCode": "12222"
       },
       "status": "pending"
     }

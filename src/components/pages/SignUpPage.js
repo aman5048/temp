@@ -1,12 +1,7 @@
 import React from "react";
 import { Link, Navigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  selectCount,
-  selectError,
-  selectLoggedInUser,
-  createUserAsync,
-} from "./auth/authSlice";
+import { selectLoggedInUser, createUserAsync } from "./auth/authSlice";
 import { useForm } from "react-hook-form";
 
 function Signup() {
