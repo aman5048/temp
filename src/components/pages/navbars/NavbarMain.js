@@ -18,8 +18,8 @@ const navigation = [
 ];
 
 const userProfile = [
-  { name: "Yourprofile", navigatorLink: "/mainpage", current: true },
-  { name: "Settings", navigatorLink: "/mainpage", current: false },
+  { name: "Yourprofile", navigatorLink: "/profile", current: true },
+  { name: "My Orders", navigatorLink: "/orders", current: false },
   { name: "Signout", navigatorLink: "/", current: false },
 ];
 

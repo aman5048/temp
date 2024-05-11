@@ -20,6 +20,9 @@ import AboutUsPage from "./components/pages/aboutPage";
 import Protected from "./components/pages/auth/protected";
 import { selectLoggedInUser } from "./components/pages/auth/authSlice";
 import { fetchItemsByUserIdAsync } from "./components/cart/cartSlice";
+import OrderSuccessPage from "./components/pages/OrderSuccessPage";
+import UserOrders from "./components/user/userOrders";
+import UserOrdersPage from "./components/pages/userOrderPage";
 
 const router = createBrowserRouter([
   {
@@ -79,7 +82,7 @@ const router = createBrowserRouter([
     element: <AboutUsPage />,
   },
   {
-    path: "/404",
+    path: "*",
     element: <NotFound />,
   },
   {
@@ -92,6 +95,17 @@ const router = createBrowserRouter([
       <Protected>
         <Checkout />
       </Protected>
+    ),
+  },
+  {
+    path: "/order-success/:id",
+    element: <OrderSuccessPage></OrderSuccessPage>,
+  },
+  {
+    path: "/orders",
+    element: (
+      <UserOrdersPage></UserOrdersPage>
+      // we will add Page later right now using component directly.
     ),
   },
 ]);

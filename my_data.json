@@ -2530,52 +2530,73 @@
           "city": "sikkar",
           "state": "Rajisthsn",
           "pinCode": "126512"
+        },
+        {
+          "name": "tester",
+          "email": "test@gmail.com",
+          "phone": "65156516516",
+          "street": "test",
+          "city": "bikanr",
+          "state": "Rajisthsn",
+          "pinCode": "126512"
+        },
+        {
+          "name": "tester",
+          "email": "test@gmail.com",
+          "phone": "65156516516889",
+          "street": "testakjak",
+          "city": "bikanrsaka",
+          "state": "Rajisthsn",
+          "pinCode": "126512"
+        },
+        {
+          "name": "Tester One",
+          "email": "Tester123@gmail.com",
+          "phone": "9588198123",
+          "street": "jiojiojoijoi",
+          "city": "sikkar",
+          "state": "Rajisthsn",
+          "pinCode": "126512"
+        },
+        {
+          "name": "tester two",
+          "email": "test@gmail.com",
+          "phone": "6515651651",
+          "street": "test",
+          "city": "bikanr",
+          "state": "Rajisthsn",
+          "pinCode": "126512"
         }
       ]
     }
   ],
-  "cart": [
-    {
-      "id": "a27b",
-      "title": "Samsung Universe 9",
-      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
-      "price": 1249,
-      "discountPercentage": 15.46,
-      "rating": 4.09,
-      "stock": 36,
-      "brand": "Samsung",
-      "category": "smartphones",
-      "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/3/1.jpg"
-      ],
-      "quantity": 1,
-      "user": "ddb9"
-    }
-  ],
+  "cart": [],
   "orders": [
     {
-      "id": "b4ba",
+      "id": "08ef",
       "items": [
         {
-          "id": "a27b",
-          "title": "Samsung Universe 9",
-          "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
-          "price": 1249,
-          "discountPercentage": 15.46,
-          "rating": 4.09,
-          "stock": 36,
-          "brand": "Samsung",
+          "id": "1660",
+          "title": "iPhone X",
+          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+          "price": 899,
+          "discountPercentage": 17.94,
+          "rating": 4.44,
+          "stock": 34,
+          "brand": "Apple",
           "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
           "images": [
-            "https://i.dummyjson.com/data/products/3/1.jpg"
+            "https://i.dummyjson.com/data/products/2/1.jpg",
+            "https://i.dummyjson.com/data/products/2/2.jpg",
+            "https://i.dummyjson.com/data/products/2/3.jpg",
+            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
           ],
           "quantity": 1,
           "user": "ddb9"
         }
       ],
-      "totalAmount": 1249,
+      "totalAmount": 899,
       "totalItems": 1,
       "user": {
         "id": "ddb9",
@@ -2592,48 +2613,40 @@
             "city": "sikkar",
             "state": "Rajisthsn",
             "pinCode": "126512"
-          }
-        ]
-      },
-      "paymentMethod": null,
-      "selectedAddress": null
-    },
-    {
-      "id": "bbe3",
-      "items": [
-        {
-          "id": "a27b",
-          "title": "Samsung Universe 9",
-          "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
-          "price": 1249,
-          "discountPercentage": 15.46,
-          "rating": 4.09,
-          "stock": 36,
-          "brand": "Samsung",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/3/1.jpg"
-          ],
-          "quantity": 1,
-          "user": "ddb9"
-        }
-      ],
-      "totalAmount": 1249,
-      "totalItems": 1,
-      "user": {
-        "id": "ddb9",
-        "email": "Tester123@gmail.com",
-        "password": "TesterOne123",
-        "first_name": "Aman",
-        "last_name": "Singh",
-        "addresses": [
+          },
           {
-            "name": "Aman Singh",
-            "email": "singhaman5048@gmail.com",
-            "phone": "09588198123",
-            "street": "jksdnakd jkdsj",
+            "name": "tester",
+            "email": "test@gmail.com",
+            "phone": "65156516516",
+            "street": "test",
+            "city": "bikanr",
+            "state": "Rajisthsn",
+            "pinCode": "126512"
+          },
+          {
+            "name": "tester",
+            "email": "test@gmail.com",
+            "phone": "65156516516889",
+            "street": "testakjak",
+            "city": "bikanrsaka",
+            "state": "Rajisthsn",
+            "pinCode": "126512"
+          },
+          {
+            "name": "Tester One",
+            "email": "Tester123@gmail.com",
+            "phone": "9588198123",
+            "street": "jiojiojoijoi",
             "city": "sikkar",
+            "state": "Rajisthsn",
+            "pinCode": "126512"
+          },
+          {
+            "name": "tester two",
+            "email": "test@gmail.com",
+            "phone": "6515651651",
+            "street": "test",
+            "city": "bikanr",
             "state": "Rajisthsn",
             "pinCode": "126512"
           }
@@ -2641,14 +2654,15 @@
       },
       "paymentMethod": "cash",
       "selectedAddress": {
-        "name": "Aman Singh",
-        "email": "singhaman5048@gmail.com",
-        "phone": "09588198123",
-        "street": "jksdnakd jkdsj",
-        "city": "sikkar",
+        "name": "tester two",
+        "email": "test@gmail.com",
+        "phone": "6515651651",
+        "street": "test",
+        "city": "bikanr",
         "state": "Rajisthsn",
         "pinCode": "126512"
-      }
+      },
+      "status": "pending"
     }
   ]
 }
