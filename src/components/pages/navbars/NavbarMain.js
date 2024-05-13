@@ -9,11 +9,12 @@ import {
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectItems } from "../../cart/cartSlice";
+import { selectLoggedInUser } from "../auth/authSlice";
 
 const navigation = [
   { name: "Dashboard", navigatorLink: "/mainpage", current: true },
   { name: "Create Product", navigatorLink: "/editor", current: false },
-  { name: "Projects", navigatorLink: "/", current: false },
+  { name: "Adimin", navigatorLink: "/mainpage", current: false },
   { name: "Calendar", navigatorLink: "/", current: false },
 ];
 
@@ -67,8 +68,7 @@ export default function NavbarMain({ children }) {
     //             <div className="hidden sm:ml-6 sm:block">
     //               <div className="flex space-x-4">
     //                 {navigation.map((item) => (
-    //                   <Link key={item.name} to={item.navigatorLink}>
-    //                     <a
+    //                   <Link key={item.name} to={item.navigatorLink}
     //                       key={item.name}
     //                       href={item.href}
     //                       className={classNames(
@@ -80,7 +80,6 @@ export default function NavbarMain({ children }) {
     //                       aria-current={item.current ? "page" : undefined}
     //                     >
     //                       {item.name}
-    //                     </a>
     //                   </Link>
     //                 ))}
     //               </div>
@@ -288,15 +287,14 @@ export default function NavbarMain({ children }) {
                                   <Link to={item.navigatorLink} key={item.name}>
                                     <Menu.Item key={item.name}>
                                       {({ active }) => (
-                                        <a
-                                          href={item.href}
+                                        <div
                                           className={classNames(
                                             active ? "bg-gray-100" : "",
                                             "block px-4 py-2 text-sm text-gray-700"
                                           )}
                                         >
                                           {item.name}
-                                        </a>
+                                        </div>
                                       )}
                                     </Menu.Item>
                                   </Link>
@@ -351,15 +349,14 @@ export default function NavbarMain({ children }) {
                               {userProfile.map((item) => (
                                 <Menu.Item key={item.name}>
                                   {({ active }) => (
-                                    <a
-                                      href={item.href}
+                                    <div
                                       className={classNames(
                                         active ? "bg-gray-100" : "",
                                         "block px-4 py-2 text-sm text-gray-700"
                                       )}
                                     >
                                       {item.name}
-                                    </a>
+                                    </div>
                                   )}
                                 </Menu.Item>
                               ))}

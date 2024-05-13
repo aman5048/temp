@@ -98,6 +98,7 @@ function Signup() {
                       first_name: data.firstname,
                       last_name: data.lastname,
                       addresses: [],
+                      role: "user",
                     })
                   );
                   console.log(data);

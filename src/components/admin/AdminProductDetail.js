@@ -2,7 +2,10 @@ import { useState, useEffect } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProductByIdAsync, selectProductById } from "./productListSlice";
+import {
+  fetchProductByIdAsync,
+  selectProductById,
+} from "../products/productListSlice";
 import { useParams } from "react-router-dom";
 import { addToCartAsync } from "../cart/cartSlice";
 import { selectLoggedInUser } from "../pages/auth/authSlice";
@@ -34,12 +37,11 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function ProductDetail() {
+export default function AdminProductDetail() {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
   const user = useSelector(selectLoggedInUser);
   const product = useSelector(selectProductById);
-  console.log({ product });
   const dispatch = useDispatch();
   const params = useParams();
 
@@ -59,10 +61,7 @@ export default function ProductDetail() {
       {product && (
         <div className="pt-6">
           <nav aria-label="Breadcrumb">
-            <ol
-              role="list"
-              className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8"
-            >
+            <ol className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
               {product.breadcrumbs &&
                 product.breadcrumbs.map((breadcrumb) => (
                   <li key={breadcrumb.id}>
@@ -131,6 +130,7 @@ export default function ProductDetail() {
               />
             </div>
           </div>
+
           {/* Product info */}
           <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
             <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
@@ -138,12 +138,14 @@ export default function ProductDetail() {
                 {product.title}
               </h1>
             </div>
+
             {/* Options */}
             <div className="mt-4 lg:row-span-3 lg:mt-0">
               <h2 className="sr-only">Product information</h2>
               <p className="text-3xl tracking-tight text-gray-900">
                 ${product.price}
               </p>
+
               {/* Reviews */}
               <div className="mt-6">
                 <h3 className="sr-only">Reviews</h3>
@@ -165,10 +167,12 @@ export default function ProductDetail() {
                   <p className="sr-only">{product.rating} out of 5 stars</p>
                 </div>
               </div>
+
               <form className="mt-10">
                 {/* Colors */}
                 <div>
                   <h3 className="text-sm font-medium text-gray-900">Color</h3>
+
                   <RadioGroup
                     value={selectedColor}
                     onChange={setSelectedColor}
@@ -218,6 +222,7 @@ export default function ProductDetail() {
                       Size guide
                     </a>
                   </div>
+
                   <RadioGroup
                     value={selectedSize}
                     onChange={setSelectedSize}
@@ -286,6 +291,7 @@ export default function ProductDetail() {
                     </div>
                   </RadioGroup>
                 </div>
+
                 <button
                   onClick={handleCart}
                   type="submit"
@@ -295,6 +301,7 @@ export default function ProductDetail() {
                 </button>
               </form>
             </div>
+
             <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
               {/* Description and details */}
               <div>
@@ -306,10 +313,12 @@ export default function ProductDetail() {
                   </p>
                 </div>
               </div>
+
               <div className="mt-10">
                 <h3 className="text-sm font-medium text-gray-900">
                   Highlights
                 </h3>
+
                 <div className="mt-4">
                   <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
                     {highlights.map((highlight) => (
@@ -320,8 +329,10 @@ export default function ProductDetail() {
                   </ul>
                 </div>
               </div>
+
               <div className="mt-10">
                 <h2 className="text-sm font-medium text-gray-900">Details</h2>
+
                 <div className="mt-4 space-y-6">
                   <p className="text-sm text-gray-600">{product.description}</p>
                 </div>
@@ -329,110 +340,6 @@ export default function ProductDetail() {
             </div>
           </div>
         </div>
-
-        // <div class="bg-gray-100 dark:bg-gray-800 py-8">
-        //   <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        //     <div className="flex flex-col md:flex-row -mx-4">
-        //       <div className="md:flex-1 px-4">
-        //         <div className="h-[460px] rounded-lg bg-gray-300 dark:bg-gray-700 mb-4">
-        //           <img
-        //             className="w-full h-full object-cover"
-        //             src="https://cdn.pixabay.com/photo/2020/05/22/17/53/mockup-5206355_960_720.jpg"
-        //             alt="Product Image"
-        //           />
-        //         </div>
-        //         <div className="flex -mx-2 mb-4">
-        //           <div className="w-1/2 px-2">
-        //             <button className="w-full bg-gray-900 dark:bg-gray-600 text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800 dark:hover:bg-gray-700">
-        //               Add to Cart
-        //             </button>
-        //           </div>
-        //           <div className="w-1/2 px-2">
-        //             <button className="w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white py-2 px-4 rounded-full font-bold hover:bg-gray-300 dark:hover:bg-gray-600">
-        //               Add to Wishlist
-        //             </button>
-        //           </div>
-        //         </div>
-        //       </div>
-        //       <div className="md:flex-1 px-4">
-        //         <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
-        //           Product Name
-        //         </h2>
-        //         <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-        //           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-        //           sed ante justo. Integer euismod libero id mauris malesuada
-        //           tincidunt.
-        //         </p>
-        //         <div className="flex mb-4">
-        //           <div className="mr-4">
-        //             <span className="font-bold text-gray-700 dark:text-gray-300">
-        //               Price:
-        //             </span>
-        //             <span className="text-gray-600 dark:text-gray-300">
-        //               $29.99
-        //             </span>
-        //           </div>
-        //           <div>
-        //             <span className="font-bold text-gray-700 dark:text-gray-300">
-        //               Availability:
-        //             </span>
-        //             <span className="text-gray-600 dark:text-gray-300">
-        //               In Stock
-        //             </span>
-        //           </div>
-        //         </div>
-        //         <div className="mb-4">
-        //           <span className="font-bold text-gray-700 dark:text-gray-300">
-        //             Select Color:
-        //           </span>
-        //           <div className="flex items-center mt-2">
-        //             <button className="w-6 h-6 rounded-full bg-gray-800 dark:bg-gray-200 mr-2"></button>
-        //             <button className="w-6 h-6 rounded-full bg-red-500 dark:bg-red-700 mr-2"></button>
-        //             <button className="w-6 h-6 rounded-full bg-blue-500 dark:bg-blue-700 mr-2"></button>
-        //             <button className="w-6 h-6 rounded-full bg-yellow-500 dark:bg-yellow-700 mr-2"></button>
-        //           </div>
-        //         </div>
-        //         <div className="mb-4">
-        //           <span className="font-bold text-gray-700 dark:text-gray-300">
-        //             Select Size:
-        //           </span>
-        //           <div className="flex items-center mt-2">
-        //             <button className="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">
-        //               S
-        //             </button>
-        //             <button className="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">
-        //               M
-        //             </button>
-        //             <button className="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">
-        //               L
-        //             </button>
-        //             <button className="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">
-        //               XL
-        //             </button>
-        //             <button className="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">
-        //               XXL
-        //             </button>
-        //           </div>
-        //         </div>
-        //         <div>
-        //           <span className="font-bold text-gray-700 dark:text-gray-300">
-        //             Product Description:
-        //           </span>
-        //           <p className="text-gray-600 dark:text-gray-300 text-sm mt-2">
-        //             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-        //             sed ante justo. Integer euismod libero id mauris malesuada
-        //             tincidunt. Vivamus commodo nulla ut lorem rhoncus aliquet.
-        //             Duis dapibus augue vel ipsum pretium, et venenatis sem
-        //             blandit. Quisque ut erat vitae nisi ultrices placerat non
-        //             eget velit. Integer ornare mi sed ipsum lacinia, non
-        //             sagittis mauris blandit. Morbi fermentum libero vel nisl
-        //             suscipit, nec tincidunt mi consectetur.
-        //           </p>
-        //         </div>
-        //       </div>
-        //     </div>
-        //   </div>
-        // </div>
       )}
     </div>
   );

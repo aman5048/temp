@@ -1,0 +1,26 @@
+{
+  "products": [
+    {{#repeat 10}}
+    {
+      "id": "{{@index}}",
+      "title": "{{lorem 3}}",
+      "description": "{{lorem 10}}",
+      "price": {{integer 10 1000}},
+      "discountPercentage": {{float 5 20}},
+      "rating": {{float 1 5}},
+      "stock": {{integer 1 500}},
+      "brand": "{{company}}",
+      "category": "{{random 'lighting' 'furniture' 'electronics'}}",
+      "thumbnail": "https://i.dummyjson.com/data/products/{{@index}}/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/{{@index}}/1.jpg",
+        "https://i.dummyjson.com/data/products/{{@index}}/2.jpg",
+        "https://i.dummyjson.com/data/products/{{@index}}/3.jpg",
+        "https://i.dummyjson.com/data/products/{{@index}}/4.jpg",
+        "https://i.dummyjson.com/data/products/{{@index}}/thumbnail.jpg"
+      ],
+      "deleted": false
+    }
+    {{/repeat}}
+  ]
+}

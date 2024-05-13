@@ -9,7 +9,11 @@ import {
 export default function UserOrders() {
   const dispatch = useDispatch();
   const user = useSelector(selectUserInfo);
+  console.log("user", user);
   const orders = useSelector(selectUserOrders);
+  console.log("orders", orders);
+
+  console.log(orders);
 
   console.log(orders.selectedAddress);
 
