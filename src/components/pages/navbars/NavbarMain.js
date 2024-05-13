@@ -15,7 +15,7 @@ const navigation = [
   { name: "Dashboard", navigatorLink: "/mainpage", current: true },
   { name: "Create Product", navigatorLink: "/editor", current: false },
   { name: "Adimin", navigatorLink: "/mainpage", current: false },
-  { name: "Calendar", navigatorLink: "/", current: false },
+  { name: "All orders", navigatorLink: "/admin/orders", current: false },
 ];
 
 const userProfile = [
