@@ -199,7 +199,17 @@ export default function ProductList() {
               {/* Product grid */}
               <div className="lg:col-span-3">
                 {user.role === "admin" ? (
-                  <ProductGridAdmin products={products}></ProductGridAdmin>
+                  <>
+                    <div>
+                      <Link
+                        to="/admin/product-form"
+                        className="rounded-md mx-10 my-5 bg-green-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                      >
+                        Add New Product
+                      </Link>
+                    </div>
+                    <ProductGridAdmin products={products}></ProductGridAdmin>
+                  </>
                 ) : (
                   <ProductGrid products={products}></ProductGrid>
                 )}

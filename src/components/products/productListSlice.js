@@ -8,6 +8,7 @@ import {
   fetchBrands,
   fetchCategories,
 } from "./productListAPI";
+
 const initialState = {
   products: [],
   status: "idle",
