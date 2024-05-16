@@ -4,8 +4,6 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ITEMS_PER_PAGE } from "../pages/common/constants";
 import {
   ChevronDownIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
   FunnelIcon,
   MinusIcon,
   PlusIcon,
@@ -472,7 +470,7 @@ function ProductGridAdmin({ products }) {
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {products.map((product) => (
             <div>
-              <Link to={`/product-detail/${product.id}`} key={product.id}>
+              <Link to={`/products/${product.id}`} key={product.id}>
                 <div className="group relative border-solid border-2 p-2 border-gray-200">
                   <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
                     <img

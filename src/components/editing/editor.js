@@ -74,7 +74,11 @@ function Editor() {
     mydata.append("selectedSize", selectedSize);
     mydata.append("price", CustomProduct.price);
 
-    createCustomProductAsync(mydata);
+    fetch("http://localhost:8080/customProducts/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(mydata),
+    }).then((res) => res.json());
   }
 
   // console.log(CustomProduct);
