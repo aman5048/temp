@@ -55,6 +55,7 @@ export const editorSlice = createSlice({
       })
       .addCase(createCustomProductAsync.fulfilled, (state, action) => {
         state.status = "succeeded";
+        if (action.payload) alert("custom data added");
         state.createProductscustom.push(action.payload);
       });
   },

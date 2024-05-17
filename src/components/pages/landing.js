@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Landing() {
   return (
     <>
@@ -8,19 +9,19 @@ function Landing() {
               Latest Shirts
             </h2>
 
-            <p className="hidden max-w-lg text-white/90 md:mt-6 md:block md:text-lg md:leading-relaxed">
+            <p className=" max-w-lg text-white/90 md:mt-6 md:block md:text-lg md:leading-relaxed">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Inventore officia corporis quasi doloribus iure architecto quae
               voluptatum beatae excepturi dolores.
             </p>
 
             <div className="mt-4 sm:mt-8">
-              <a
-                href="#"
+              <Link
+                to={"/login"}
                 className="inline-block rounded-full bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
               >
                 Get Yours Today
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -31,15 +32,17 @@ function Landing() {
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <div className="bg-blue-600 p-8 md:p-12 lg:px-16 lg:py-24">
               <div className="mx-auto max-w-xl text-center">
-                <h2 className="text-2xl font-bold text-white md:text-3xl">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit
-                </h2>
+                <h2 className="text-2xl font-bold text-white md:text-3xl"></h2>
 
                 <p className="hidden text-white/90 sm:mt-4 sm:block">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-                  egestas tempus tellus etiam sed. Quam a scelerisque amet
-                  ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat
-                  quisque ut interdum tincidunt duis.
+                  {" "}
+                  Discover a world of endless possibilities with our curated
+                  collection of the finest products. From the latest fashion
+                  trends , we have everything you need to elevate your
+                  lifestyle. Enjoy seamless shopping with exclusive deals, fast
+                  shipping, and exceptional customer service. Start your journey
+                  with us today and turn your dreams into reality with just a
+                  click
                 </p>
 
                 <div className="mt-4 md:mt-8">

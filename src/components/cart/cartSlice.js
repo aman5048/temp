@@ -17,6 +17,7 @@ export const addToCartAsync = createAsyncThunk(
   async (item) => {
     const response = await addToCart(item);
     // The value we return becomes the `fulfilled` action payload
+    if (response) alert("item added to cart");
     return response.data;
   }
 );

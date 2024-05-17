@@ -416,8 +416,8 @@ function ProductGrid({ products }) {
                   <div className="group relative border-solid border-2 p-2 border-gray-200">
                     <div className="min-h-60 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
                       <img
-                        // src={product.thumbnail}
-                        src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                        src={product.thumbnail}
+                        // src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
                         alt={product.title}
                         className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                       />

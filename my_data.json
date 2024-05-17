@@ -19,8 +19,9 @@
         "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/dream_blue_plain_t-shirt_back_29_07_2023_700x933.jpg",
         "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/dream_blue_plain_t-shirt_zoom_29_07_2023_700x933.jpg"
       ],
-      "deleted": false,
-      "__v": 0
+      "deleted": true,
+      "__v": 0,
+      "id": "f04a"
     },
     {
       "_id": {
@@ -42,7 +43,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/lilac_plain_t-shirt_base_29_07_2023_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "406e"
     },
     {
       "_id": {
@@ -64,7 +66,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/black_plain_t-shirt_back_03_03_2023_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "23ce"
     },
     {
       "_id": {
@@ -86,7 +89,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/burgundy_plain_t-shirt_back_03_03_2023_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "3139"
     },
     {
       "_id": {
@@ -108,7 +112,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/mustard_plain_t-shirt_back_view_03_03_2023_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "e67a"
     },
     {
       "_id": {
@@ -130,7 +135,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/bottle_green_plain_t-shirt_back_03_03_2023_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "adce"
     },
     {
       "_id": {
@@ -151,8 +157,9 @@
         "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/seafoam_green_plain_t-shirt_zoom_29_07_2023_700x933.jpg",
         "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/seafoam_green_plain_t-shirt_base_29_07_2023_700x933.jpg"
       ],
-      "deleted": false,
-      "__v": 0
+      "deleted": true,
+      "__v": 0,
+      "id": "612f"
     },
     {
       "_id": {
@@ -174,7 +181,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/navy_blue_plain_t-shirt_back_03_03_2023_03_03_2023_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "a094"
     },
     {
       "_id": {
@@ -196,7 +204,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/space_grey_plain_t-shirt_base_03_03_2023_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "364a"
     },
     {
       "_id": {
@@ -218,7 +227,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/red_plain_t-shirt_base_03_03_2023_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "a9b1"
     },
     {
       "_id": {
@@ -240,7 +250,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/rose_pink_plain_t-shirt_men_base_03_03_2023_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "fd88"
     },
     {
       "_id": {
@@ -262,7 +273,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/white_plain_t-shirt_base_03_03_2023_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "9e96"
     },
     {
       "_id": {
@@ -284,7 +296,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/new_plain_hoodies_for_men/plain_black_hoodies_men_tag_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "bbd1"
     },
     {
       "_id": {
@@ -306,7 +319,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/hoodie_for_men_new_images/plain_cyan_blue_hoodies_for_men_base_7_1_2022_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "fad6"
     },
     {
       "_id": {
@@ -328,7 +342,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/hoodie_for_men_new_images/plain_grey_hoodies_for_men_base_7_1_2022_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "90bd"
     },
     {
       "_id": {
@@ -350,7 +365,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/hoodie_for_men_new_images/plain_bottle_green_hoodies_for_men_base_7_1_2022_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "cff9"
     },
     {
       "_id": {
@@ -372,7 +388,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/hoodie_for_men_new_images/game_over_hoodies_for_men_base_7_1_2022_400x400.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "7cab"
     },
     {
       "_id": {
@@ -394,7 +411,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/hoodie_for_men_new_images/beyoung_official_hoodies_for_men_base_2_12_2022_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "2578"
     },
     {
       "_id": {
@@ -416,7 +434,8 @@
         "https://www.beyoung.in/api/cache/catalog/products/hoodie_for_men_new_images/wanderer_travel_hoodies_for_men_base_7_1_2022_700x933.jpg"
       ],
       "deleted": false,
-      "__v": 0
+      "__v": 0,
+      "id": "27fd"
     }
   ],
   "brands": [
@@ -1175,363 +1194,78 @@
         }
       ],
       "role": "user"
+    },
+    {
+      "id": "e962",
+      "email": "TesterFour123@gamil.com",
+      "password": "TesterFour123",
+      "first_name": "tester",
+      "last_name": "Four",
+      "addresses": [],
+      "role": "user"
+    },
+    {
+      "id": "71b0",
+      "email": "testTwo123@gmail.com",
+      "password": "TesterTwo123",
+      "first_name": "Aman",
+      "last_name": "Singh",
+      "addresses": [],
+      "role": "user"
     }
   ],
   "cart": [
     {
-      "id": "7307",
-      "title": "iPhone X",
-      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-      "price": 899,
-      "discountPercentage": 17.94,
-      "rating": 4.44,
-      "stock": 34,
-      "brand": "Apple",
-      "category": "smartphones",
-      "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+      "id": "413f",
+      "_id": {
+        "$oid": "6586c08dfd39eca84f065f9f"
+      },
+      "title": "Lilac Plain T-Shirt",
+      "description": "180 GSM & Bio-washed Cotton ? makes the fabric extra soft",
+      "price": 499,
+      "discountPercentage": 10,
+      "rating": 0,
+      "stock": 100,
+      "brand": "yolo",
+      "category": "tshirt",
+      "thumbnail": "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/lilac_plain_t-shirt_base_29_07_2023_700x933.jpg",
       "images": [
-        "https://i.dummyjson.com/data/products/2/1.jpg",
-        "https://i.dummyjson.com/data/products/2/2.jpg",
-        "https://i.dummyjson.com/data/products/2/3.jpg",
-        "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+        "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/lilac_plain_t-shirt_back_29_07_2023_700x933.jpg",
+        "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/lilac_plain_t-shirt_neck_and_sleeve_29_07_2023_700x933.jpg",
+        "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/lilac_plain_t-shirt_zoom_29_07_2023_700x933.jpg",
+        "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/lilac_plain_t-shirt_base_29_07_2023_700x933.jpg"
       ],
+      "deleted": false,
+      "__v": 0,
       "quantity": 1,
-      "user": "6899"
+      "user": "d1d1"
+    },
+    {
+      "id": "155f",
+      "_id": {
+        "$oid": "6586c08dfd39eca84f065f9f"
+      },
+      "title": "Lilac Plain T-Shirt",
+      "description": "180 GSM & Bio-washed Cotton ? makes the fabric extra soft",
+      "price": 499,
+      "discountPercentage": 10,
+      "rating": 0,
+      "stock": 100,
+      "brand": "yolo",
+      "category": "tshirt",
+      "thumbnail": "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/lilac_plain_t-shirt_base_29_07_2023_700x933.jpg",
+      "images": [
+        "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/lilac_plain_t-shirt_back_29_07_2023_700x933.jpg",
+        "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/lilac_plain_t-shirt_neck_and_sleeve_29_07_2023_700x933.jpg",
+        "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/lilac_plain_t-shirt_zoom_29_07_2023_700x933.jpg",
+        "https://www.beyoung.in/api/cache/catalog/products/plain_new_update_images_2_5_2022/lilac_plain_t-shirt_base_29_07_2023_700x933.jpg"
+      ],
+      "deleted": false,
+      "__v": 0,
+      "quantity": 1,
+      "user": "d1d1"
     }
   ],
-  "orders": [
-    {
-      "id": "08ef",
-      "items": [
-        {
-          "id": "1660",
-          "title": "iPhone X",
-          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-          "price": 899,
-          "discountPercentage": 17.94,
-          "rating": 4.44,
-          "stock": 34,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/2/1.jpg",
-            "https://i.dummyjson.com/data/products/2/2.jpg",
-            "https://i.dummyjson.com/data/products/2/3.jpg",
-            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": "ddb9"
-        }
-      ],
-      "totalAmount": 899,
-      "totalItems": 1,
-      "user": {
-        "id": "ddb9",
-        "email": "Tester123@gmail.com",
-        "password": "TesterOne123",
-        "first_name": "Aman",
-        "last_name": "Singh",
-        "addresses": [
-          {
-            "name": "Aman Singh",
-            "email": "singhaman5048@gmail.com",
-            "phone": "09588198123",
-            "street": "jksdnakd jkdsj",
-            "city": "sikkar",
-            "state": "Rajisthsn",
-            "pinCode": "126512"
-          },
-          {
-            "name": "tester",
-            "email": "test@gmail.com",
-            "phone": "65156516516",
-            "street": "test",
-            "city": "bikanr",
-            "state": "Rajisthsn",
-            "pinCode": "126512"
-          },
-          {
-            "name": "tester",
-            "email": "test@gmail.com",
-            "phone": "65156516516889",
-            "street": "testakjak",
-            "city": "bikanrsaka",
-            "state": "Rajisthsn",
-            "pinCode": "126512"
-          },
-          {
-            "name": "Tester One",
-            "email": "Tester123@gmail.com",
-            "phone": "9588198123",
-            "street": "jiojiojoijoi",
-            "city": "sikkar",
-            "state": "Rajisthsn",
-            "pinCode": "126512"
-          },
-          {
-            "name": "tester two",
-            "email": "test@gmail.com",
-            "phone": "6515651651",
-            "street": "test",
-            "city": "bikanr",
-            "state": "Rajisthsn",
-            "pinCode": "126512"
-          }
-        ]
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": {
-        "name": "tester two",
-        "email": "test@gmail.com",
-        "phone": "6515651651",
-        "street": "test",
-        "city": "bikanr",
-        "state": "Rajisthsn",
-        "pinCode": "126512"
-      },
-      "status": "dispatched"
-    },
-    {
-      "id": "178e",
-      "items": [
-        {
-          "id": "a5a4",
-          "title": "Samsung Universe 9",
-          "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
-          "price": 1249,
-          "discountPercentage": 15.46,
-          "rating": 4.09,
-          "stock": 36,
-          "brand": "Samsung",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
-          "images": ["https://i.dummyjson.com/data/products/3/1.jpg"],
-          "quantity": 1,
-          "user": "ddb9"
-        }
-      ],
-      "totalAmount": 1249,
-      "totalItems": 1,
-      "user": {
-        "id": "ddb9",
-        "email": "Tester123@gmail.com",
-        "password": "TesterOne",
-        "first_name": "Aman",
-        "last_name": "Singh",
-        "addresses": [
-          {
-            "name": "Tester One",
-            "email": "Tester123@gmail.com",
-            "phone": "9588198123",
-            "street": "jiojiojoijoi",
-            "city": "sikkar",
-            "state": "Rajisthsn",
-            "pinCode": "126512"
-          },
-          {
-            "name": "tester two",
-            "email": "test@gmail.com",
-            "phone": "6515651651",
-            "street": "test",
-            "city": "bikanr",
-            "state": "Rajisthsn",
-            "pinCode": "126512"
-          },
-          {
-            "name": "tester one two",
-            "email": "Tester123@gmail.com",
-            "phone": "6588888813",
-            "street": "testing two",
-            "city": "citytwo",
-            "state": "statetwo",
-            "pinCode": "12222"
-          }
-        ]
-      },
-      "paymentMethod": "card",
-      "selectedAddress": {
-        "name": "tester one two",
-        "email": "Tester123@gmail.com",
-        "phone": "6588888813",
-        "street": "testing two",
-        "city": "citytwo",
-        "state": "statetwo",
-        "pinCode": "12222"
-      },
-      "status": "pending"
-    },
-    {
-      "id": "10b5",
-      "items": [
-        {
-          "id": "09ff",
-          "title": "iPhone X",
-          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-          "price": 899,
-          "discountPercentage": 17.94,
-          "rating": 4.44,
-          "stock": 34,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/2/1.jpg",
-            "https://i.dummyjson.com/data/products/2/2.jpg",
-            "https://i.dummyjson.com/data/products/2/3.jpg",
-            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": "6899"
-        }
-      ],
-      "totalAmount": 899,
-      "totalItems": 1,
-      "user": {
-        "id": "6899",
-        "email": "TesterThree123@gmail.com",
-        "password": "TesterThree123",
-        "first_name": "tester",
-        "last_name": "three",
-        "addresses": [
-          {
-            "name": "Tester Three",
-            "email": "TesterThree123@gmail.com",
-            "phone": "5644466455",
-            "street": "three",
-            "city": "citythree",
-            "state": "statethree",
-            "pinCode": "33333333"
-          }
-        ],
-        "role": "user"
-      },
-      "paymentMethod": "card",
-      "selectedAddress": {
-        "name": "Tester Three",
-        "email": "TesterThree123@gmail.com",
-        "phone": "5644466455",
-        "street": "three",
-        "city": "citythree",
-        "state": "statethree",
-        "pinCode": "33333333"
-      },
-      "status": "pending"
-    },
-    {
-      "id": "9213",
-      "items": [
-        {
-          "id": "e858",
-          "title": "iPhone X",
-          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-          "price": 899,
-          "discountPercentage": 17.94,
-          "rating": 4.44,
-          "stock": 34,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/2/1.jpg",
-            "https://i.dummyjson.com/data/products/2/2.jpg",
-            "https://i.dummyjson.com/data/products/2/3.jpg",
-            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": "6899"
-        }
-      ],
-      "totalAmount": 899,
-      "totalItems": 1,
-      "user": {
-        "id": "6899",
-        "email": "TesterThree123@gmail.com",
-        "password": "TesterThree123",
-        "first_name": "tester",
-        "last_name": "three",
-        "addresses": [
-          {
-            "name": "Tester Three",
-            "email": "TesterThree123@gmail.com",
-            "phone": "5644466455",
-            "street": "three",
-            "city": "citythree",
-            "state": "statethree",
-            "pinCode": "33333333"
-          }
-        ],
-        "role": "user"
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": {
-        "name": "Tester Three",
-        "email": "TesterThree123@gmail.com",
-        "phone": "5644466455",
-        "street": "three",
-        "city": "citythree",
-        "state": "statethree",
-        "pinCode": "33333333"
-      },
-      "status": "pending"
-    },
-    {
-      "id": "3514",
-      "items": [
-        {
-          "id": "c452",
-          "title": "iPhone X",
-          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-          "price": 899,
-          "discountPercentage": 17.94,
-          "rating": 4.44,
-          "stock": 34,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/2/1.jpg",
-            "https://i.dummyjson.com/data/products/2/2.jpg",
-            "https://i.dummyjson.com/data/products/2/3.jpg",
-            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
-          ],
-          "deleted": false,
-          "quantity": 1,
-          "user": "1485"
-        }
-      ],
-      "totalAmount": 899,
-      "totalItems": 1,
-      "user": {
-        "id": "1485",
-        "email": "diveshTesterOne123@gmail.com",
-        "password": "diveshTesterOne123",
-        "first_name": "divesh",
-        "last_name": "TESTER",
-        "addresses": [
-          {
-            "name": "divesh TESTER One",
-            "email": "diveshTesterOne123@gmail.com",
-            "phone": "4654654654",
-            "street": "diveshTesterStreet",
-            "city": "diveshTestercity",
-            "state": "diveshTesterstate",
-            "pinCode": "33333333"
-          }
-        ],
-        "role": "user"
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": {
-        "name": "divesh TESTER One",
-        "email": "diveshTesterOne123@gmail.com",
-        "phone": "4654654654",
-        "street": "diveshTesterStreet",
-        "city": "diveshTestercity",
-        "state": "diveshTesterstate",
-        "pinCode": "33333333"
-      },
-      "status": "pending"
-    }
-  ]
+  "orders": [],
+  "customProducts": []
 }

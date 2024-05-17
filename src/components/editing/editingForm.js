@@ -26,6 +26,10 @@ function EditingForm(props) {
               <RadioGroup.Option
                 key={color.name}
                 value={color}
+                onClick={() => {
+                  console.log("color.color", color.color);
+                  props.setSelectedColor(color.color);
+                }}
                 className={({ active, checked }) =>
                   classNames(
                     color.selectedClass,
